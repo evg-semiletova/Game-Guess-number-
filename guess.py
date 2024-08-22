@@ -1,13 +1,12 @@
 import random
 
-guesses_taken = 0
 
 print("Hey! What's your name?")
 name = input()
 number = random.randint(1, 20)
 print(f"so {name}, I'm guessing the number")
 
-for guesses_taken in range(6):
+for i in range(6):
     print("try to guess")
     guess = int(input())
 
@@ -21,8 +20,7 @@ for guesses_taken in range(6):
         break
 
 if guess == number:
-    guesses_taken = str(guesses_taken + 1)
-    print(f"great {name}, you did it in {guesses_taken} tries")
+    print(f"great {name}, you did it in {i + 1} tries")
 
 if guess != number:
     print(f"Alas, I had a number {number} in mind")
